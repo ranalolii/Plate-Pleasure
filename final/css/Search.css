@@ -1,0 +1,78 @@
+body {
+    background: url(../assets/serach.png) center/cover no-repeat;
+    min-height: 100vh; /* Ensure that the body covers the viewport height */
+   
+    margin: 0;
+}
+
+.search-container {
+    background-color: rgba(180, 169, 153, 0.77);
+    margin-top: 100px;
+    margin-left: 550px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 1rem;
+}
+
+.search-container input[type=text] {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+#recipeContainer {
+    border-radius: 10px;
+    margin-bottom: 100px;
+    padding: 10px;
+    background-color: rgba(9, 9, 9, 0.657);
+    color: aliceblue;
+    font-size: smaller;
+    width: fit-content;
+    
+    margin: auto; /* Center the recipe container horizontally */
+    margin-bottom: 100px;
+}
+
+
+footer {
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+body {
+    padding-bottom: 40px; /* Adjust this value to match the height of your footer */
+}
+
+
+
+
+body.recipe-closed footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+body:not(.recipe-closed) footer {
+    position: relative;
+}
+

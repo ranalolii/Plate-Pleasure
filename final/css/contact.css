@@ -1,0 +1,92 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+
+.contact_page {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../assets/contact2.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Make the container a column flexbox */
+    align-items: center;
+  }
+  
+  .container_contact {
+    width: 85%;
+    max-width: 1200px; /* Add max-width to limit container width */
+    margin: 50px auto; /* Center the container horizontally */
+    background: #1d1b1b;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10rem;
+  }
+  
+  .h1_ {
+    color: #fbfbff;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .para {
+    color: #fbfbff;
+    text-align: center;
+    margin: 50px auto; /* Center the paragraph horizontally */
+    max-width: 800px; /* Add max-width to limit paragraph width */
+  }
+  
+  .container_contact .content_contact {
+    padding: 10px 60px 30px;
+    color: #fbfbff;
+    align-items: center;
+   
+  }
+  
+  .container_contact .left-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container_contact .left-side .details {
+    margin: 14px;
+    text-align: center;
+  }
+  
+  .container_contact .left-side .details i {
+    font-size: 30px;
+    color: #e47418;
+    margin-right: 10px;
+  }
+  
+  .container_contact .left-side .details .topic {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .container_contact .left-side .details .text-one,
+  .container_contact .left-side .details .text-two {
+    font-size: 14px;
+    color: #fbfbff;
+  }
+  
+  .page-footer {
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #1d1b1b;
+  color: #fbfbff;
+  padding: 20px 0;
+  text-align: center;
+    /* margin-top: auto; Push the footer to the bottom */
+  }

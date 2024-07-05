@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./assets/Black and Gold Luxury Elegant Restaurant Logo Design.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css">
+
+    
+
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+  <body>
+
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview (1).png" alt="pp" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="recipes.html" class="nav-link"> Categories </a>
+          <a href="contact.html" class="nav-link"> Contact </a>
+          <a href="SignLogin.html" class="nav-link">  Sign Up </a>
+          <a href="Login.html" class="nav-link">  Login </a>
+          <a href="Search.html" class="nav-link">  Search </a>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <div id="login-box">
+      <div class="right">
+          <h1 class="login">Already have an account! login now </h1>
+          <input type="text" id="login-email" name="email" placeholder="E-mail" />
+          <input type="password" id="login-password" name="password" placeholder="Password" />
+          <input type="submit" id="login" name="login" value="Login" />
+      </div>
+  </div>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwY3bAiDw0vxVVGP-SOO0j6J9XcII5tio",
+    authDomain: "login-signup-e92a0.firebaseapp.com",
+    databaseURL: "https://login-signup-e92a0-default-rtdb.firebaseio.com",
+    projectId: "login-signup-e92a0",
+    storageBucket: "login-signup-e92a0.appspot.com",
+    messagingSenderId: "218540488366",
+    appId: "1:218540488366:web:7ad6a7cbf2d322d1999f3f"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const auth = getAuth();
+
+
+
+  // Login functionality
+  document.getElementById('login').addEventListener('click', (e) => {
+      var email = document.getElementById('login-email').value;
+      var password = document.getElementById('login-password').value;
+
+      signInWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+              // Signed in 
+              const user = userCredential.user;
+
+              const dt = new Date();
+              update(ref(database, 'users/' +user.uid),{
+                  last_login: dt
+              })
+
+              alert('User Logged in!');
+          })
+          .catch((error) => {
+              const errorMessage = error.message;
+              alert(errorMessage);
+          });
+  });
+</script>
+
+    
+     
+      
+     <footer >
+        <p>
+          <p>Address: 123 Street, City, Country</p>
+          <p>Phone: +1234567890</p>
+          <p>Email: example@example.com</p>
+        </p>
+      </footer>
+      
+ 
+  <script src="./js/app.js"></script>
+</body>
+</html>

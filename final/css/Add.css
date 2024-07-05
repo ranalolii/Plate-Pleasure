@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .ingredients {
+    margin-bottom: 20px;
+  }
+  
+  .recipes {
+    display: none;
+  }
+  
+  .recipe {
+    margin-bottom: 20px;
+  }
+  
+  .recipe h2 {
+    color: #333;
+  }
+  
+  .recipe p {
+    margin: 5px 0;
+  }
+  
